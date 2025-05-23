@@ -11,5 +11,6 @@ config_version=5
 [application]
 
 config/name="Jungle delivery"
+run/main_scene="uid://c6bco8duu3e7p"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
