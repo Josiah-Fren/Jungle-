@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://ckvvmreapf6if"]
 
-[ext_resource type="PackedScene" uid="uid://dhy8wwqv7hh5r" path="res://MECHANICS/player.tscn" id="1_kxgjs"]
+[ext_resource type="PackedScene" uid="uid://u8i1kcnp5gb4" path="res://MECHANICS/player.tscn" id="1_kxgjs"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kxgjs"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -15,7 +15,7 @@ sky = SubResource("Sky_f6bkd")
 tonemap_mode = 2
 glow_enabled = true
 
-[node name="World" type="Node3D"]
+[node name="World2" type="Node3D"]
 
 [node name="Map" type="Node3D" parent="."]
 
