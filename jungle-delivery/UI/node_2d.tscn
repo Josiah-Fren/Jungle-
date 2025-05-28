@@ -9,6 +9,7 @@ anchors_preset = 0
 script = ExtResource("1_17ugu")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
 offset_left = 545.0
 offset_top = 277.0
 offset_right = 627.0
@@ -36,6 +37,6 @@ text = "QUIT"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/PLAY" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/PLAY" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/SETTINGS" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/SETTINGS" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/SETTINGS" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/QUIT" to="." method="_on_quit_pressed"]
