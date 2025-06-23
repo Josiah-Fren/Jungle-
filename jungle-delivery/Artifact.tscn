@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://1fqd5xfs2540"]
+[gd_scene load_steps=5 format=3 uid="uid://1fqd5xfs2540"]
 
 [ext_resource type="Script" uid="uid://daxkboa8ikjat" path="res://ITEMS/Scripts/static_body_3d.gd" id="1_wmfye"]
+[ext_resource type="Texture2D" uid="uid://c3fbrkv4pinut" path="res://ASSETS/download.jpg" id="2_wmfye"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_dlpto"]
 
@@ -10,6 +11,7 @@
 script = ExtResource("1_wmfye")
 item_type = "artifact"
 item_scene_path = "res://Artifact.tscn"
+item_icon = ExtResource("2_wmfye")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_dlpto")

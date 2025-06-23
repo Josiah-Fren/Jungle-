@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://u8i1kcnp5gb4"]
 
 [ext_resource type="Script" uid="uid://bjire6s1ospye" path="res://MECHANICS/player.gd" id="1_xiwui"]
-[ext_resource type="Script" uid="uid://clrh75b88ne4k" path="res://UI/SCRIPTS/hotbar_ui.gd" id="2_vug0d"]
+[ext_resource type="Script" path="res://UI/SCRIPTS/hotbar_ui.gd" id="2_vug0d"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_rdryi"]
 
