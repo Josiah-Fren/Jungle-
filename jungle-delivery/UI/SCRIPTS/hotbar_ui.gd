@@ -21,12 +21,13 @@ func update_hotbar(hotbar: Array, selected_slot: int):
 	for i in range(slots.size()):
 		var texture_rect = slots[i].get_child(0)
 		if i < hotbar.size() and hotbar[i] != null and hotbar[i].has("icon") and hotbar[i]["icon"] != null:
-			var icon_path = hotbar[i]["icon"]
-			if ResourceLoader.exists(icon_path):
-				texture_rect.texture = load(icon_path)
+			print("OUTPUT :" ,hotbar[i], " CURRENT SLOT  ", hotbar[i]["icon"])
+			var icon = hotbar[i]["icon"]
+			if icon:
+				texture_rect.texture = icon
 			else:
 				texture_rect.texture = null
-				print("Error: Invalid icon path for slot ", i, ": ", icon_path)
+				print("Error: Invalid icon path for slot ", i, ": ", icon)
 		else:
 			texture_rect.texture = null
 		# Highlight selected slot with bright green, dim others

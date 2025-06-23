@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://drog816jl4q66"]
 
 [ext_resource type="Script" uid="uid://dn85of4x61fck" path="res://ITEMS/Scripts/torch.gd" id="1_w5wq3"]
-[ext_resource type="Texture2D" uid="uid://deeqlspm5sw3s" path="res://ASSETS/download (2).jpg" id="2_w5wq3"]
+[ext_resource type="Texture2D" uid="uid://bkahbpxtuexju" path="res://ASSETS/download (5).jpg" id="2_w5wq3"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mt1pa"]
 

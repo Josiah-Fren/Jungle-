@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://1fqd5xfs2540"]
 
 [ext_resource type="Script" uid="uid://daxkboa8ikjat" path="res://ITEMS/Scripts/static_body_3d.gd" id="1_wmfye"]
-[ext_resource type="Texture2D" uid="uid://c3fbrkv4pinut" path="res://ASSETS/download.jpg" id="2_wmfye"]
+[ext_resource type="Texture2D" uid="uid://cfskupmgyulbt" path="res://3d models/Image_0.jpg" id="2_wmfye"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_dlpto"]
 

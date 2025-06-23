@@ -91,6 +91,7 @@ func interact():
 		if collider.is_in_group("pickup"):
 			var item_data = collider.get_item_data()
 			if add_item_to_hotbar(item_data):
+				#pass
 				collider.queue_free()
 		elif collider.is_in_group("temple") and hotbar[selected_slot] and hotbar[selected_slot]["type"] == "artifact":
 			collider.place_artifact()
