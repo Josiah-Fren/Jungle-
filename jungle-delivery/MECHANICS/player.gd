@@ -91,14 +91,31 @@ func interact():
 		if collider.is_in_group("pickup"):
 			var item_data = collider.get_item_data()
 			if add_item_to_hotbar(item_data):
-				#pass
-				collider.queue_free()
+				collider.hide()  # Temporarily hide
+				collider.set_collision_layer_value(1, false)  # Disable collision
+				#await get_tree().create_timer(0.1).timeout  # Wait for physics step
+				#collider.queue_free()  # Remove after delay
 		elif collider.is_in_group("temple") and hotbar[selected_slot] and hotbar[selected_slot]["type"] == "artifact":
 			collider.place_artifact()
 			hotbar[selected_slot] = null
 			update_held_item()
 			update_hotbar_ui()
 			end_game()
+
+#func interact():
+	#if raycast.is_colliding():
+		#var collider = raycast.get_collider()
+		#if collider.is_in_group("pickup"):
+			#var item_data = collider.get_item_data()
+			#if add_item_to_hotbar(item_data):
+				##pass
+				#collider.queue_free()
+		#elif collider.is_in_group("temple") and hotbar[selected_slot] and hotbar[selected_slot]["type"] == "artifact":
+			#collider.place_artifact()
+			#hotbar[selected_slot] = null
+			#update_held_item()
+			#update_hotbar_ui()
+			#end_game()
 
 func end_game():
 	print("Game Over! Artifact delivered to the temple!")
