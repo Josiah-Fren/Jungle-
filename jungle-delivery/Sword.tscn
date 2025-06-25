@@ -7,7 +7,7 @@
 
 [sub_resource type="BoxMesh" id="BoxMesh_kdr8f"]
 
-[node name="Sword" type="StaticBody3D" groups=["pickup"]]
+[node name="Sword" type="RigidBody3D" groups=["pickup"]]
 script = ExtResource("1_tt53q")
 item_type = "sword"
 item_scene_path = "res://Sword.tscn"

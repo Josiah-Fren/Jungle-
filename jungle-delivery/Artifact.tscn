@@ -7,7 +7,7 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5h8ex"]
 
-[node name="Artifact" type="StaticBody3D" groups=["pickup"]]
+[node name="Artifact" type="RigidBody3D" groups=["pickup"]]
 script = ExtResource("1_wmfye")
 item_type = "artifact"
 item_scene_path = "res://Artifact.tscn"

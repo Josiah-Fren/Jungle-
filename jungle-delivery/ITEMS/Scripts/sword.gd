@@ -1,4 +1,4 @@
-extends StaticBody3D
+extends RigidBody3D
 
 @export var item_type: String = ""
 @export var item_scene_path: String = ""
