@@ -101,5 +101,5 @@ bus = &"SFX"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": ExtResource("3_cqo2g")
+&"": ExtResource("3_cqo2g")
 }

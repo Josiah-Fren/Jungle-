@@ -1,0 +1,78 @@
+[gd_scene load_steps=11 format=3 uid="uid://dtmmgcke1vvou"]
+
+[ext_resource type="Script" uid="uid://dstu6gw2ftyri" path="res://addons/cogito/Wieldables/wieldable_pickaxe.gd" id="1_aea1l"]
+[ext_resource type="Script" uid="uid://b361n7ae3ixmn" path="res://addons/cogito/Assets/Shader/ViewmodelSpace.gd" id="2_mp32a"]
+[ext_resource type="PackedScene" uid="uid://cgbeyu6mmbrgd" path="res://scenes/Items/sword (1).glb" id="3_cyg05"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_aea1l"]
+
+[sub_resource type="Animation" id="Animation_e7h2t"]
+resource_name = "equip"
+
+[sub_resource type="Animation" id="Animation_ni4te"]
+resource_name = "unequip"
+
+[sub_resource type="Animation" id="Animation_pq5pc"]
+resource_name = "swing"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.233333, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 1.30175), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_d26f8"]
+resource_name = "reset"
+
+[sub_resource type="Animation" id="Animation_rdu8v"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rdu8v"]
+_data = {
+&"RESET": SubResource("Animation_rdu8v"),
+&"equip": SubResource("Animation_e7h2t"),
+&"reset": SubResource("Animation_d26f8"),
+&"swing": SubResource("Animation_pq5pc"),
+&"unequip": SubResource("Animation_ni4te")
+}
+
+[node name="WeildableSword" type="Node3D"]
+script = ExtResource("1_aea1l")
+
+[node name="Node3D" type="Node3D" parent="."]
+script = ExtResource("2_mp32a")
+
+[node name="DamageArea" type="Area3D" parent="Node3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/DamageArea"]
+transform = Transform3D(0.51, 0, 0, 0, 0.51, 0, 0, 0, 0.51, 0, 0, 0)
+shape = SubResource("BoxShape3D_aea1l")
+
+[node name="sword (1)" parent="Node3D" instance=ExtResource("3_cyg05")]
+transform = Transform3D(-2.62268e-09, 0, 0.06, 0, 0.06, 0, -0.06, 0, -2.62268e-09, 0, 0, -0.407588)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Node3D/DamageArea")
+libraries = {
+&"": SubResource("AnimationLibrary_rdu8v")
+}
+
+[editable path="Node3D/sword (1)"]
