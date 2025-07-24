@@ -36,7 +36,7 @@
 [ext_resource type="PackedScene" uid="uid://i7fum2jx3ac3" path="res://addons/cogito/PackedScenes/ladder.tscn" id="27_1lvv6"]
 [ext_resource type="Script" uid="uid://bbq3bdpyu0d4y" path="res://addons/cogito/Scripts/cogito_spawnzone.gd" id="28_5k0xi"]
 [ext_resource type="PackedScene" uid="uid://c1umit2vtv22v" path="res://addons/cogito/PackedScenes/projectile_pistol.tscn" id="28_fsk2l"]
-[ext_resource type="PackedScene" uid="uid://cgce75ts2twkp" path="res://addons/cogito/PackedScenes/Pickups/pickup_pickaxe.tscn" id="29_ai41f"]
+[ext_resource type="PackedScene" uid="uid://cgce75ts2twkp" path="res://addons/cogito/pickup_pickaxe.tscn" id="29_ai41f"]
 [ext_resource type="PackedScene" uid="uid://co1opmwyvl27" path="res://addons/cogito/DemoScenes/DemoPrefabs/barrel.tscn" id="31_c4s3c"]
 [ext_resource type="PackedScene" uid="uid://b76etfjjltnts" path="res://addons/cogito/DemoScenes/DemoPrefabs/ceiling_fan_lab.tscn" id="32_j2alh"]
 [ext_resource type="PackedScene" uid="uid://c7ft55rxa0rum" path="res://addons/cogito/DemoScenes/DemoPrefabs/ksi_steps_flat.tscn" id="33_01501"]

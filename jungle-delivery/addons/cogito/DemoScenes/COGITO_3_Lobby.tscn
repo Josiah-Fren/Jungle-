@@ -8019,12 +8019,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.64733, 1.11563, -1.01477)
 [connection signal="body_entered" from="QUESTS/Archive_QuestStarter" to="QUESTS/Archive_QuestStarter" method="_on_body_entered"]
 [connection signal="body_entered" from="QUESTS/Laptop_QuestStarter" to="QUESTS/Laptop_QuestStarter" method="_on_body_entered"]
 [connection signal="body_entered" from="QUESTS/Archive_QuestEnder" to="QUESTS/Archive_QuestEnder" method="_on_body_entered"]
-[connection signal="on_hold_complete" from="UPPER_OFFICE_CEO/WindowedDoor/FrontDoor/DualInteraction" to="UPPER_OFFICE_CEO/WindowedDoor/FrontDoor/LockInteraction" method="interact"]
-[connection signal="on_quick_press" from="UPPER_OFFICE_CEO/WindowedDoor/FrontDoor/DualInteraction" to="UPPER_OFFICE_CEO/WindowedDoor/FrontDoor/BasicInteraction" method="interact"]
-[connection signal="pressed" from="ARCHIVE/CameraButton" to="ARCHIVE/SecurityCamera" method="turn_off"]
 [connection signal="body_entered" from="CUBICLE_AREA/WaterFeature/WetZone" to="CUBICLE_AREA/WaterFeature/WetZone" method="_on_body_entered"]
 [connection signal="body_entered" from="CUBICLE_AREA/WaterFeature2/WetZone2" to="CUBICLE_AREA/WaterFeature2/WetZone2" method="_on_body_entered"]
-[connection signal="switched" from="LabPowerSwitch" to="LabPowerSwitch/Set_LabPower" method="on_bool_signal"]
 
 [editable path="UPPER_OFFICE_CEO/WindowedDoor"]
 [editable path="ARCHIVE/ArchiveDoor"]
