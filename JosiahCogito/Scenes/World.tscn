@@ -1,0 +1,85 @@
+[gd_scene load_steps=13 format=3 uid="uid://dxwsrrcupab8x"]
+
+[ext_resource type="PackedScene" uid="uid://bxuupopq8akq3" path="res://Assets/final map.glb" id="1_d1c63"]
+[ext_resource type="PackedScene" uid="uid://kicjwmh02uwf" path="res://addons/cogito/PackedScenes/cogito_player.tscn" id="2_1lgw5"]
+[ext_resource type="Script" uid="uid://di15gqemrkk0x" path="res://addons/cogito/InventoryPD/CustomResources/InventorySlotPD.gd" id="3_hlk0d"]
+[ext_resource type="Script" uid="uid://btnha2whsheir" path="res://addons/cogito/InventoryPD/cogito_inventory.gd" id="4_0uv0p"]
+[ext_resource type="PackedScene" uid="uid://bq41fmbxbf0u3" path="res://Items/SwordArtifact/Pickup_Sword.tscn" id="5_p70al"]
+[ext_resource type="PackedScene" uid="uid://cwd3g16ep0idw" path="res://addons/cogito/PackedScenes/Pickups/pickup_flashlight.tscn" id="6_45d1s"]
+[ext_resource type="PackedScene" uid="uid://dn4e1k7u3suoo" path="res://addons/cogito/Enemies/cogito_basic_enemy.tscn" id="7_y7y61"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_d1c63"]
+size = Vector3(136.449, 39.3597, 1.88672)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hlk0d"]
+size = Vector3(1, 39.0652, 151.062)
+
+[sub_resource type="Resource" id="Resource_q2d71"]
+resource_local_to_scene = true
+script = ExtResource("4_0uv0p")
+grid = true
+starter_inventory = Array[ExtResource("3_hlk0d")]([])
+inventory_size = Vector2i(5, 3)
+inventory_slots = Array[ExtResource("3_hlk0d")]([null, null, null, null, null, null, null, null, null, null, null, null, null, null, null])
+
+[sub_resource type="Sky" id="Sky_45d1s"]
+
+[sub_resource type="Environment" id="Environment_y7y61"]
+background_mode = 2
+sky = SubResource("Sky_45d1s")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.2207, 19.5462, -105.042)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0342999, 0, 143.771)
+shape = SubResource("BoxShape3D_d1c63")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.2207, 19.5462, -105.042)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D2"]
+shape = SubResource("BoxShape3D_d1c63")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.255, 14.9503, -30.6257)
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_hlk0d")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0343249, 0, 1.65391)
+skeleton = NodePath("final map")
+
+[node name="final map" parent="MeshInstance3D" instance=ExtResource("1_d1c63")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-1, 0, 6.27833e-07, 5.65331e-07, 0.434964, 0.900448, -2.73085e-07, 0.900448, -0.434964, 3.03073, 30.4354, -14.3721)
+light_energy = 3.424
+light_indirect_energy = 2.616
+shadow_enabled = true
+
+[node name="Player" parent="." instance=ExtResource("2_1lgw5")]
+transform = Transform3D(-1, 0, 7.45058e-07, 0, 1, 0, -7.45058e-07, 0, -1, 3.03073, 2.43541, -14.3721)
+inventory_data = SubResource("Resource_q2d71")
+step_height_camera_lerp = 1.5
+
+[node name="Wall" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 87.364, 14.9503, -30.6257)
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Wall"]
+shape = SubResource("BoxShape3D_hlk0d")
+
+[node name="SwordArtifact" parent="." instance=ExtResource("5_p70al")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.671409, 0.473376, -14.8292)
+
+[node name="Pickup_Flashlight" parent="." instance=ExtResource("6_45d1s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1732, 4.44823, -14.1106)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_y7y61")
+
+[node name="CogitoEnemy" parent="." instance=ExtResource("7_y7y61")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6019, 0.496042, -10.2856)

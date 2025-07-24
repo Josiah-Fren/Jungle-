@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="WieldableItemPD" load_steps=4 format=3 uid="uid://doyyqoyat4gby"]
+
+[ext_resource type="Script" uid="uid://bkxgkf3pj8kb8" path="res://addons/cogito/InventoryPD/CustomResources/WieldableItemPD.gd" id="1_qg37l"]
+[ext_resource type="Texture2D" uid="uid://beo8f8johms40" path="res://Items/SwordArtifact/Sword.jpg" id="1_w804p"]
+[ext_resource type="PackedScene" uid="uid://dtmmgcke1vvou" path="res://Items/SwordArtifact/weildable_sword.tscn" id="3_70gc6"]
+
+[resource]
+script = ExtResource("1_qg37l")
+wieldable_scene = ExtResource("3_70gc6")
+no_reload = true
+hint_on_empty = ""
+charge_max = 0.0
+ammo_item_name = ""
+charge_current = 0.0
+wieldable_range = 0.0
+wieldable_damage = 0.0
+name = "Sword"
+description = "A cool sword"
+icon = ExtResource("1_w804p")
+is_stackable = false
+is_droppable = true
+is_unique = true
+stack_size = 0
+drop_scene = "uid://bq41fmbxbf0u3"
+item_drop_size = 0.5
+hint_text_on_use = ""
+item_size = Vector2(1, 1)
+can_auto_slot = false
+slot_number = -1
+metadata/_custom_type_script = "uid://bkxgkf3pj8kb8"

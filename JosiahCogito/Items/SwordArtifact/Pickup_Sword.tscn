@@ -1,0 +1,37 @@
+[gd_scene load_steps=9 format=3 uid="uid://bq41fmbxbf0u3"]
+
+[ext_resource type="Script" uid="uid://dmeh01c5ccjqc" path="res://addons/cogito/CogitoObjects/cogito_object.gd" id="1_3s2vb"]
+[ext_resource type="PackedScene" uid="uid://cio4x05ipvslu" path="res://addons/cogito/Components/Interactions/CarryableComponent.tscn" id="2_1s0pu"]
+[ext_resource type="PackedScene" uid="uid://1xq4y42qkcur" path="res://addons/cogito/Components/Interactions/PickupComponent.tscn" id="3_8phsp"]
+[ext_resource type="Resource" uid="uid://doyyqoyat4gby" path="res://Items/SwordArtifact/Artifact_Sword.tres" id="4_8phsp"]
+[ext_resource type="Script" uid="uid://di15gqemrkk0x" path="res://addons/cogito/InventoryPD/CustomResources/InventorySlotPD.gd" id="5_8xqrw"]
+[ext_resource type="PackedScene" uid="uid://r2w6ss2mfb4m" path="res://3d models/sword (1).glb" id="6_8xqrw"]
+
+[sub_resource type="Resource" id="Resource_8kfeh"]
+script = ExtResource("5_8xqrw")
+inventory_item = ExtResource("4_8phsp")
+quantity = 1
+origin_index = -1
+metadata/_custom_type_script = "uid://di15gqemrkk0x"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8xqrw"]
+size = Vector3(0.32, 1.28446, 0.27731)
+
+[node name="SwordArtifact" type="RigidBody3D"]
+script = ExtResource("1_3s2vb")
+cogito_name = "SwordArtifact"
+display_name = "Sword"
+
+[node name="CarryableComponent" parent="." instance=ExtResource("2_1s0pu")]
+input_map_action = "interact"
+
+[node name="PickupComponent" parent="." instance=ExtResource("3_8phsp")]
+slot_data = SubResource("Resource_8kfeh")
+input_map_action = "interact2"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.494732, 0.0623462)
+shape = SubResource("BoxShape3D_8xqrw")
+
+[node name="sword (1)" parent="." instance=ExtResource("6_8xqrw")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.0219425, 0, 0.0768194)
