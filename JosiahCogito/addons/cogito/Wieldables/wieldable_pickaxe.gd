@@ -30,12 +30,13 @@ func grab_player_stamina_attribute() -> CogitoAttribute:
 	if CogitoSceneManager._current_player_node.stamina_attribute:
 		return CogitoSceneManager._current_player_node.stamina_attribute
 	else:
-		CogitoGlobals.debug_log(true, "CogitoWieldable", "No player stamina attribute found.")
+		CogitoGlobals.debug_log(true, "CogitoWieldable", "No _on_damage_area_body_enteredplayer stamina attribute found.")
 		return null
 
 
 # Primary action called by the Player Interaction Component when flashlight is wielded.
 func action_primary(_passed_item_reference:InventoryItemPD, _is_released: bool):
+	print("primary")
 	if _is_released:
 		return
 	
@@ -57,6 +58,7 @@ func action_primary(_passed_item_reference:InventoryItemPD, _is_released: bool):
 
 
 func _on_body_entered(collider):
+	print("hit")
 	if collider.has_signal("damage_received"):
 		var player = player_interaction_component.get_parent()
 		var hit_position : Vector3

@@ -7924,7 +7924,6 @@ shape = SubResource("ConvexPolygonShape3D_n4app")
 
 [node name="Pickup_Flashlight" parent="." instance=ExtResource("91_fk2yu")]
 transform = Transform3D(-0.379472, 0, -0.925203, 0, 1, 0, 0.925203, 0, -0.379472, 4.70889, 1.33737, -0.00629956)
-cogito_name = ""
 
 [node name="RippedPageA_pickup" parent="." instance=ExtResource("91_qq2p0")]
 transform = Transform3D(-2.63806e-09, 0.998177, -0.0603517, 4.36317e-08, 0.0603517, 0.998177, 1, 0, -4.37114e-08, 5.13684, 0.51698, -11.7774)

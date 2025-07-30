@@ -4063,7 +4063,6 @@ cogito_name = ""
 
 [node name="Pickup_Pickaxe" parent="NavigationRegion3D/SHOOTING_RANGE" instance=ExtResource("29_ai41f")]
 transform = Transform3D(0.995536, -0.0938573, -0.0099791, 0, 0.105726, -0.994395, 0.0943863, 0.989956, 0.105254, 1.44729, 0.86964, -11.7382)
-cogito_name = ""
 
 [node name="HealthPotion" parent="NavigationRegion3D/SHOOTING_RANGE" instance=ExtResource("37_0wxqc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0588015, 1.21509, -11.2257)
@@ -4540,7 +4539,7 @@ script = ExtResource("53_xiupp")
 patrol_points = [NodePath("Patrolpoint_A"), NodePath("Patrolpoint_B"), NodePath("Patrolpoint_C")]
 
 [node name="Patrolpoint_A" type="Marker3D" parent="EnemyPatrolpath2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.78055, 0.1, -5.3669)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.78055, 0.1, -2.73076)
 
 [node name="Patrolpoint_B" type="Marker3D" parent="EnemyPatrolpath2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2806, 0.1, -8.1769)
