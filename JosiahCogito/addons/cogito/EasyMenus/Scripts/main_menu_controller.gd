@@ -45,8 +45,7 @@ func _play_pressed() -> void:
 #endregion
 
 
-func _ready():
-	first_focus_button.grab_focus()
+
 
 
 func quit():

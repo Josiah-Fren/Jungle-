@@ -98,6 +98,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector3(0, -1.5708, 0)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:monitoring")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_e7h2t"]
 resource_name = "equip"
@@ -113,6 +125,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector3(0, -1.5708, 1.5708), Vector3(0, -1.5708, 0)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:monitoring")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_d26f8"]
 resource_name = "reset"
@@ -126,10 +150,22 @@ tracks/0/path = NodePath("..:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.26, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.15, 0.3, 0.45, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(0, -1.5708, 0), Vector3(4.37032e-08, -1.5708, 1.55142), Vector3(0, -1.5708, 0)]
+"values": [Vector3(0, -1.5708, 0), Vector3(0, -1.5708, 0.523599), Vector3(0, -1.5708, 1.5708), Vector3(0, -1.5708, 0.523599), Vector3(0, -1.5708, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:monitoring")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
 }
 
 [sub_resource type="Animation" id="Animation_ni4te"]
@@ -145,6 +181,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector3(0, -1.5708, 0), Vector3(0, -1.5708, 3.14159)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:monitoring")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rdu8v"]
@@ -169,6 +217,7 @@ transform = Transform3D(-2.58829e-06, 0, -0.715, 0, 0.715, 0, 0.715, 0, -2.58829
 
 [node name="DamageArea" type="Area3D" parent="SwordMesh"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.67951, -0.403354)
+monitoring = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SwordMesh/DamageArea"]
 transform = Transform3D(0.510003, 0, -3.76254e-07, 0, 0.51, 0, 3.76254e-07, 0, 0.510003, 0.0257599, 0.238767, -0.0159089)
