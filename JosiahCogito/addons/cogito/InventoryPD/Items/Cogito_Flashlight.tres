@@ -32,4 +32,4 @@ hint_text_on_use = ""
 item_size = Vector2(1, 1)
 sound_pickup = ExtResource("3_f88a5")
 can_auto_slot = true
-slot_number = 2
+slot_number = 1

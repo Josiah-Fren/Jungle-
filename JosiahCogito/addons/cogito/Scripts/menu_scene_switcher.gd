@@ -7,7 +7,7 @@ extends Node
 
 func _on_main_menu_start_game_pressed():
 	if start_game_scene: 
-		CogitoSceneManager.load_next_scene(start_game_scene, "", "temp", CogitoSceneManager.CogitoSceneLoadMode.RESET) #Load_mode 2 means there's no attempt to load a state.
+		get_tree().change_scene_to_file("res://Scenes/World.tscn")
 	else:
 		print("menu_scene_switcher.gd: No start game scene set.")
 

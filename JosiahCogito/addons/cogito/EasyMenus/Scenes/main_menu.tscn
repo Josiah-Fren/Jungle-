@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://e31n36p8i6an" path="res://addons/cogito/DemoScenes/COGITO_3_Lobby.tscn" id="10_hdl4c"]
 [ext_resource type="Script" uid="uid://c024i2xgr6uib" path="res://addons/cogito/EasyMenus/Scripts/main_menu_saveslot_manager.gd" id="13_4uenq"]
 
-[node name="MainMenu" type="Control" node_paths=PackedStringArray("first_focus_button")]
+[node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -20,7 +20,6 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_74dia")
 script = ExtResource("1_lbw7r")
-first_focus_button = NodePath("")
 sound_hover = ExtResource("3_cfl52")
 sound_click = ExtResource("4_mhv4c")
 
