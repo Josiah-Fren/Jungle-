@@ -148,27 +148,6 @@ theme_override_font_sizes/font_size = 16
 text = "YYYY-MM-DD HH:MM"
 horizontal_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Content/GameMenu/VBoxContainer"]
-layout_mode = 2
-
-[node name="LoadButton" type="Button" parent="Content/GameMenu/VBoxContainer/HBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-theme_override_font_sizes/font_size = 30
-text = "Load"
-script = ExtResource("6_a8sll")
-
-[node name="SaveButton" type="Button" parent="Content/GameMenu/VBoxContainer/HBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-theme_override_font_sizes/font_size = 30
-text = "Save"
-script = ExtResource("6_a8sll")
-
 [node name="Separator_PanelContainer2" type="PanelContainer" parent="Content/GameMenu/VBoxContainer"]
 custom_minimum_size = Vector2(0, 15)
 layout_mode = 2
@@ -205,8 +184,6 @@ main_menu_scene = "res://addons/cogito/DemoScenes/COGITO_0_MainMenu.tscn"
 
 [connection signal="back_to_main_pressed" from="." to="MenuSceneSwitcher" method="_on_pause_menu_back_to_main_pressed"]
 [connection signal="pressed" from="Content/GameMenu/VBoxContainer/ResumeGameButton" to="." method="_on_resume_game_button_pressed"]
-[connection signal="pressed" from="Content/GameMenu/VBoxContainer/HBoxContainer/LoadButton" to="." method="_on_load_button_pressed"]
-[connection signal="pressed" from="Content/GameMenu/VBoxContainer/HBoxContainer/SaveButton" to="." method="_on_save_button_pressed"]
 [connection signal="pressed" from="Content/GameMenu/VBoxContainer/OptionsButton" to="." method="open_options_menu"]
 [connection signal="pressed" from="Content/GameMenu/VBoxContainer/BackToMenuButton" to="." method="_on_back_to_menu_button_pressed"]
 [connection signal="pressed" from="Content/GameMenu/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

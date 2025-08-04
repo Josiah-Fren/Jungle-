@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://di15gqemrkk0x" path="res://addons/cogito/InventoryPD/CustomResources/InventorySlotPD.gd" id="3_k58d2"]
 [ext_resource type="Script" uid="uid://btnha2whsheir" path="res://addons/cogito/InventoryPD/cogito_inventory.gd" id="4_cs7c4"]
 
-[sub_resource type="Resource" id="Resource_6f746"]
+[sub_resource type="Resource" id="Resource_srjhq"]
 resource_local_to_scene = true
 script = ExtResource("4_cs7c4")
 grid = true
@@ -23,5 +23,5 @@ skeleton = NodePath("final temple")
 
 [node name="Player" parent="." instance=ExtResource("2_7unth")]
 transform = Transform3D(-1, 0, 7.45058e-07, 0, 1, 0, -7.45058e-07, 0, -1, 3.03073, 5.12409, -63.6155)
-inventory_data = SubResource("Resource_6f746")
+inventory_data = SubResource("Resource_srjhq")
 step_height_camera_lerp = 1.5
