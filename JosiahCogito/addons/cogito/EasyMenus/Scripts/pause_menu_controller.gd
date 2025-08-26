@@ -62,7 +62,6 @@ func _play_pressed() -> void:
 func open_pause_menu():
 	#Stops game and shows pause menu
 	get_tree().paused = true
-	label_active_slot.text = "Current Slot: " + CogitoSceneManager._active_slot
 	temp_screenshot = grab_temp_screenshot()
 	show()
 	game_menu.show()
@@ -91,20 +90,11 @@ func load_current_slot_data():
 		var texture = ImageTexture.create_from_image(image)
 		%Screenshot_Spot.texture = texture
 	else:
-		%Screenshot_Spot.texture = empty_slot_texture
+		pass
 		print("No screenshot for slot ", CogitoSceneManager._active_slot, " found.")
 		
 	# Load save state time
-	var savetime : int
-	if CogitoSceneManager._player_state:
-		savetime = CogitoSceneManager._player_state.player_state_savetime
-	if savetime == null or typeof(savetime) != TYPE_INT or savetime == 0:
-		%Label_SaveTime.text = ""
-	else:
-		var timeoffset = Time.get_time_zone_from_system().bias*60
-		var save_time_string = Time.get_datetime_string_from_unix_time(savetime+timeoffset,true)
-		
-		%Label_SaveTime.text = save_time_string
+
 
 
 func close_pause_menu():

@@ -162,7 +162,7 @@ tracks/1/path = NodePath(".:monitoring")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.15, 0.6),
+"times": PackedFloat32Array(0, 0.2, 0.333333),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [false, true, false]
@@ -208,6 +208,7 @@ _data = {
 script = ExtResource("1_aea1l")
 damage_area = NodePath("SwordMesh/DamageArea")
 uses_stamina = true
+stamina_cost = 0
 use_camera_collision = true
 wieldable_mesh = NodePath(".")
 anim_action_primary = "swing"

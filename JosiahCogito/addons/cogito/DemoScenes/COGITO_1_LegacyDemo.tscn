@@ -1514,7 +1514,6 @@ cogito_name = ""
 
 [node name="Pickup_Flashlight" parent="ITEM_PICKUPS" instance=ExtResource("1_oweej")]
 transform = Transform3D(0.707107, 0.603448, 0.368578, 0, 0.521248, -0.853405, -0.707107, 0.603448, 0.368578, -4.73354, 1.21477, 0.740502)
-cogito_name = ""
 
 [node name="HealthPotion" parent="ITEM_PICKUPS" instance=ExtResource("12_2vt2n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.04485, 1.30439, -2.94002)

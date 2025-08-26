@@ -10,7 +10,7 @@ var States # is the StateMachine itself
 ## How long this attack takes.
 @export var attack_duration : float = 0.5
 ## The damage that will be sent to target
-@export var attack_damage : int = 1
+@export var attack_damage : int = 15
 ## The stagger/bounce back strength of the attack
 @export var attack_stagger : float = 8.0
 @export var attack_sound : AudioStream

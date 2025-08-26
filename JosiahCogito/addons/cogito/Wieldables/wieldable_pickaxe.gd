@@ -3,7 +3,7 @@ extends CogitoWieldable
 @export_group("Pickaxe Settings")
 @export var damage_area : Area3D
 @export var uses_stamina : bool = false
-@export var stamina_cost : int = 4
+@export var stamina_cost : int = 2
 ##Collision hit can be defined using Camera-Collider raycast, or Hitbox-Collider raycast. Camera-Collider is more reliable but less accurate, Hitbox-collider is more accurate but less reliable
 @export var use_camera_collision : bool
 

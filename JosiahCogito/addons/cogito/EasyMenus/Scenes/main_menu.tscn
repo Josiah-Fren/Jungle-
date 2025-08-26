@@ -25,17 +25,18 @@ sound_click = ExtResource("4_mhv4c")
 
 [node name="ContentMain" type="VBoxContainer" parent="."]
 layout_mode = 2
-offset_left = 100.0
-offset_top = 50.0
-offset_right = 600.0
-offset_bottom = 671.0
+offset_left = 74.0
+offset_top = 57.0
+offset_right = 1336.0
+offset_bottom = 817.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 15
+alignment = 1
 
 [node name="ChatGptImageJul31,2025,024024Pm" type="Sprite2D" parent="ContentMain"]
-position = Vector2(571.5, 309.25)
-scale = Vector2(0.855469, 0.709473)
+position = Vector2(883.5, 487.375)
+scale = Vector2(1.24219, 1.06177)
 texture = ExtResource("5_72g5g")
 
 [node name="HSeparator" type="HSeparator" parent="ContentMain"]

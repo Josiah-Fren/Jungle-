@@ -136,6 +136,7 @@ material = ExtResource("5_5tohn")
 
 [node name="CarriableBox" parent="." instance=ExtResource("8_4hlpp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.71717, 0.823779, 2.91211)
+cogito_name = ""
 
 [node name="HealthPotion" parent="." instance=ExtResource("8_vj2ak")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.39538, 0.273078, 6.10744)

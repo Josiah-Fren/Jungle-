@@ -1,9 +1,10 @@
-[gd_scene load_steps=26 format=3 uid="uid://dn4e1k7u3suoo"]
+[gd_scene load_steps=27 format=3 uid="uid://dn4e1k7u3suoo"]
 
 [ext_resource type="Script" uid="uid://cveqmky0mbpl0" path="res://addons/cogito/Enemies/cogito_basic_enemy.gd" id="1_0lcvu"]
 [ext_resource type="Script" uid="uid://661d0lst55nw" path="res://addons/cogito/CogitoObjects/cogito_security_camera.gd" id="2_6jysp"]
 [ext_resource type="AudioStream" uid="uid://cn4rtt8qbtiti" path="res://addons/cogito/Assets/Audio/Kenney/Impacts/impactPlank_medium_000.ogg" id="2_q5685"]
 [ext_resource type="AudioStream" uid="uid://bd7xfxmsaeu0o" path="res://addons/cogito/Assets/Audio/435666__mirkosukovic__alarm-siren.wav" id="3_7u8yw"]
+[ext_resource type="PackedScene" uid="uid://bf5df2cpebgmi" path="res://3d models/Enemies/cac-1754948154942.gltf" id="3_t27k0"]
 [ext_resource type="PackedScene" uid="uid://cqgg1nng0vvbh" path="res://addons/cogito/Components/Attributes/HealthAttribute.tscn" id="4_y8n8v"]
 [ext_resource type="PackedScene" uid="uid://bc2hryr610vgo" path="res://addons/cogito/PackedScenes/simple_particle_puff.tscn" id="5_ni6ul"]
 [ext_resource type="PackedScene" uid="uid://crv3r7dscbxlx" path="res://addons/cogito/Enemies/body/basic_enemy_corpse.tscn" id="7_8vdb4"]
@@ -54,12 +55,15 @@ script = ExtResource("1_0lcvu")
 attack_stagger = 20.0
 attack_sound = ExtResource("2_q5685")
 
+[node name="AuxScene" parent="." instance=ExtResource("3_t27k0")]
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
 shape = SubResource("CapsuleShape3D_p3jhp")
 
 [node name="Mesh_Body" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+visible = false
 mesh = SubResource("CapsuleMesh_r2sfk")
 
 [node name="Mesh_Face" type="MeshInstance3D" parent="Mesh_Body"]
