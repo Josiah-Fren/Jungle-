@@ -16,6 +16,7 @@ origin_index = -1
 [node name="DiamondKeyA" type="RigidBody3D"]
 collision_layer = 3
 script = ExtResource("1_07h5b")
+cogito_name = ""
 custom_aabb = AABB(0, 0, 0, 0.15, 0.25, 0.02)
 
 [node name="CSGPolygon3D" type="CSGPolygon3D" parent="."]

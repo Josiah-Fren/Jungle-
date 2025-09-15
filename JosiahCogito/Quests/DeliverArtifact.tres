@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CogitoQuest" load_steps=2 format=3 uid="uid://ccc132cttwysv"]
+
+[ext_resource type="Script" uid="uid://bb3ww0nivppeq" path="res://addons/cogito/QuestSystem/CustomResources/cogito_quest.gd" id="1_0r48r"]
+
+[resource]
+script = ExtResource("1_0r48r")
+id = 0
+quest_name = "DeliverArtifact"
+quest_title = "Deliver the Artifact"
+quest_description_active = "deliver"
+quest_description_completed = "You completed this quest."
+quest_description_failed = "You failed this quest."
+quest_counter_current = 0
+quest_counter_goal = 0
+metadata/_custom_type_script = "uid://bb3ww0nivppeq"

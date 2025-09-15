@@ -1,10 +1,10 @@
 extends CogitoAttribute
 class_name CogitoStaminaAttribute
 
-@export var stamina_regen_speed : float = 1
-@export var run_exhaustion_speed : float = 1
-@export var jump_exhaustion : float = 1
-@export var regenerate_after : float = 2
+@export var stamina_regen_speed : float = 20
+@export var run_exhaustion_speed : float = 0.3
+@export var jump_exhaustion : float = 0.5
+@export var regenerate_after : float = 4
 @export var auto_regenerate : bool = true
 @export_group("Floor Slope Exhaustion Settings")
 ## If unused, running only drains stamina at the base run exhaustion speed

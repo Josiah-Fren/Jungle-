@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="InventoryItemPD" load_steps=3 format=3 uid="uid://dddo827l0ajeg"]
+
+[ext_resource type="Script" uid="uid://dog0pawpwd55d" path="res://addons/cogito/InventoryPD/CustomResources/InventoryItemPD.gd" id="1_h732s"]
+[ext_resource type="Texture2D" uid="uid://beo8f8johms40" path="res://Items/SwordArtifact/Sword.jpg" id="1_r5c36"]
+
+[resource]
+script = ExtResource("1_h732s")
+name = "Spellbook"
+description = ""
+icon = ExtResource("1_r5c36")
+is_stackable = false
+is_droppable = true
+is_unique = false
+stack_size = 0
+drop_scene = "uid://gg4lcg0gklvd"
+item_drop_size = 0.5
+hint_text_on_use = ""
+item_size = Vector2(1, 1)
+can_auto_slot = true
+slot_number = 3
+metadata/_custom_type_script = "uid://dog0pawpwd55d"

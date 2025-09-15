@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cox5jojmaa2l"]
+
+[ext_resource type="Texture2D" uid="uid://i38r3cweljq0" path="res://Assets/PICTURES/END SCREEN.png" id="1_1nkry"]
+
+[node name="ENDSCREEN" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1939.0
+offset_bottom = 1076.0
+texture = ExtResource("1_1nkry")

@@ -103,3 +103,5 @@ bus = &"SFX"
 libraries = {
 &"": ExtResource("3_cqo2g")
 }
+
+[connection signal="body_entered" from="PickaxeMesh/DamageArea" to="." method="_on_damage_area_body_entered"]
