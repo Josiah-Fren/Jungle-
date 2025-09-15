@@ -215,7 +215,7 @@ volume_db = 40.506
 autoplay = true
 
 [node name="Player" parent="." instance=ExtResource("2_7unth")]
-transform = Transform3D(-1, 0, 7.45058e-07, 0, 1, 0, -7.45058e-07, 0, -1, 268.402, 7.54783, 138.408)
+transform = Transform3D(-1, 0, 7.45058e-07, 0, 1, 0, -7.45058e-07, 0, -1, -1.59783, 7.54783, -64.5922)
 inventory_data = SubResource("Resource_uq60u")
 step_height_camera_lerp = 1.5
 

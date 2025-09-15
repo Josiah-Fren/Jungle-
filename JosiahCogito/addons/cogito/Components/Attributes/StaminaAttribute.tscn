@@ -5,9 +5,10 @@
 
 [node name="StaminaAttribute" type="Node"]
 script = ExtResource("1_jkbcj")
-stamina_regen_speed = 2.0
-run_exhaustion_speed = 3.0
-jump_exhaustion = 5.0
+stamina_regen_speed = 5.0
+run_exhaustion_speed = 1.5
+jump_exhaustion = 1.0
+regenerate_after = 2.0
 attribute_name = "stamina"
 attribute_display_name = "Stamina"
 attribute_color = Color(1, 0.733333, 0.160784, 1)
