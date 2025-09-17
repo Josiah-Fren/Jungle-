@@ -29,7 +29,7 @@ var move_speed : float = 2
 var knockback_force: Vector3 = Vector3.ZERO
 var knockback_timer: float = 0.0
 @export var knockback_duration: float = 0.5
-@export var knockback_strength: float = 10.0
+@export var knockback_strength: float = 15.0
 
 var last_direction
 

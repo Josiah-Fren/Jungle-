@@ -95,3 +95,5 @@ slot_data = SubResource("Resource_dcgvr")
 impact_sounds = SubResource("AudioStreamRandomizer_qu2a1")
 
 [node name="CarryableComponent" parent="." instance=ExtResource("6_o5nsr")]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
