@@ -19,6 +19,6 @@ transform = Transform3D(0.535, 0, 0, 0, 0.535, 0, 0, 0, 0.535, 0, 0, 0)
 shape = SubResource("BoxShape3D_cqblt")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
-omni_range = 7.5
+omni_range = 10.842
 
 [node name="spellbook_closed" parent="." instance=ExtResource("3_2wk1b")]
